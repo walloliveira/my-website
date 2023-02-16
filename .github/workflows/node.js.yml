@@ -28,11 +28,9 @@ jobs:
     - run: yarn build
     - name: ssh deploy
       uses: easingthemes/ssh-deploy@v4.0.5
-      env:
-        DEPLOY_KEY: ${{ secrets.MY_WEBSITE_DEPLOY_KEY }}
       with:
         # Private key part of an SSH key pair
-        SSH_PRIVATE_KEY: $DEPLOY_KEY
+        SSH_PRIVATE_KEY: ${{ secrets.MY_WEBSITE_DEPLOY_KEY }}
         # Remote host
         REMOTE_HOST: 89.117.7.196
         # Remote user
