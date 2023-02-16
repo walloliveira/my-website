@@ -1,30 +1,42 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from "vue";
+
+const buttonText = ref("home");
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <VLayout>
+    <VAppBar flat>
+      <VAppBarNavIcon icon="mdi-arrow-projectile" />
+      <VSpacer />
+      <VBtnToggle
+        v-model="buttonText"
+        group
+        color="deep-purple-accent-3"
+        rounded="0"
+      >
+        <VBtn prepend-icon="mdi-home" value="home"> Home </VBtn>
+        <VBtn prepend-icon="mdi-information-variant" value="about">
+          About
+        </VBtn>
+        <VBtn prepend-icon="mdi-arrow-projectile-multiple" value="skills">
+          Skills
+        </VBtn>
+        <VBtn prepend-icon="mdi-view-dashboard" value="projects">
+          Projects
+        </VBtn>
+        <VBtn prepend-icon="mdi-post" value="blog"> My Blog </VBtn>
+        <VBtn prepend-icon="mdi-phone" value="contact"> Contact </VBtn>
+      </VBtnToggle>
+    </VAppBar>
+  </VLayout>
+  <main>
+    <div class="abc"></div>
+  </main>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<style>
+.abc {
+  height: 4098px;
 }
 </style>
