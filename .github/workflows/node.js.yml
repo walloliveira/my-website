@@ -30,16 +30,16 @@ jobs:
       uses: easingthemes/ssh-deploy@v4.0.5
       with:
         # Private key part of an SSH key pair
-        SSH_PRIVATE_KEY: ${{ secrets.MY_WEBSITE_DEPLOY_KEY }}
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
         # Remote host
-        REMOTE_HOST: 89.117.7.196
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         # Remote user
-        REMOTE_USER: u482048181
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
         # Remote port
-        REMOTE_PORT: 65002
+        REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
         # Source directory, path relative to `$GITHUB_WORKSPACE` root, eg: `dist/`
         SOURCE: dist/
         # Target directory
         TARGET: /home/u482048181/public_html
         # Arguments to pass to rsync
-        ARGS: -rlgoDzvc -i --delete
+        ARGS: -avzr --delete
