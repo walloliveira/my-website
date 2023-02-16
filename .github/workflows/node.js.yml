@@ -26,4 +26,22 @@ jobs:
         cache: 'yarn'
     - run: yarn install
     - run: yarn build
-    
+    - name: ssh deploy
+      uses: easingthemes/ssh-deploy@v4.0.5
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.MY_WEBSITE_DEPLOY_KEY }}
+      with:
+        # Private key part of an SSH key pair
+        SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
+        # Remote host
+        REMOTE_HOST: 89.117.7.196
+        # Remote user
+        REMOTE_USER: u482048181
+        # Remote port
+        REMOTE_PORT: 65002
+        # Source directory, path relative to `$GITHUB_WORKSPACE` root, eg: `dist/`
+        SOURCE: ./dist
+        # Target directory
+        TARGET: /home/u482048181/public_html
+        # Arguments to pass to rsync
+        ARGS: -rlgoDzvc -i --delete
