@@ -1,42 +1,63 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-const buttonText = ref("home");
+import AppBarMenu from "./components/AppBarMenu.vue";
 </script>
 
 <template>
-  <VLayout>
-    <VAppBar flat>
-      <VAppBarNavIcon icon="mdi-arrow-projectile" />
-      <VSpacer />
-      <VBtnToggle
-        v-model="buttonText"
-        group
-        color="deep-purple-accent-3"
-        rounded="0"
-      >
-        <VBtn prepend-icon="mdi-home" value="home"> Home </VBtn>
-        <VBtn prepend-icon="mdi-information-variant" value="about">
-          About
-        </VBtn>
-        <VBtn prepend-icon="mdi-arrow-projectile-multiple" value="skills">
-          Skills
-        </VBtn>
-        <VBtn prepend-icon="mdi-view-dashboard" value="projects">
-          Projects
-        </VBtn>
-        <VBtn prepend-icon="mdi-post" value="blog"> My Blog </VBtn>
-        <VBtn prepend-icon="mdi-phone" value="contact"> Contact </VBtn>
-      </VBtnToggle>
-    </VAppBar>
-  </VLayout>
-  <main>
-    <div class="abc"></div>
-  </main>
+  <VNoSsr>
+    <VApp theme="myCustomLightTheme">
+      <VAppBar flat>
+        <VAppBarNavIcon icon="mdi-arrow-projectile" />
+        <VSpacer />
+        <AppBarMenu />
+      </VAppBar>
+      <VMain scrollable>
+        <VContainer class="app-container">
+          <VCarousel hide-delimiters cycle :show-arrows="false" height="100%">
+            <VCarouselItem>
+              <div class="d-flex align-stretch">
+                <div class="d-flex align-center">
+                  <div class="text-h1">
+                    I'm a
+                    <span class="text-primary">software engineer</span>
+                    from Brazil
+                  </div>
+                </div>
+                <VImg
+                  src="https://preview.colorlib.com/theme/niko/images/about.jpg.webp"
+                  cover
+                  width="480px"
+                />
+              </div>
+            </VCarouselItem>
+            <VCarouselItem>
+              <div class="d-flex align-stretch">
+                <div class="d-flex align-center">
+                  <div>
+                    <div class="text-subtitle-1 font-weight-bold text-info">
+                      Hello
+                    </div>
+                    <div class="text-h1">
+                      I'm
+                      <span class="text-primary">Walber Oliveira</span>
+                    </div>
+                  </div>
+                </div>
+                <VImg
+                  src="https://preview.colorlib.com/theme/niko/images/bg_2.jpg.webp"
+                  cover
+                  width="768px"
+                />
+              </div>
+            </VCarouselItem>
+          </VCarousel>
+        </VContainer>
+      </VMain>
+    </VApp>
+  </VNoSsr>
 </template>
 
-<style>
-.abc {
-  height: 4098px;
+<style scoped lang="scss">
+.app-container {
+  max-width: 1200px;
 }
 </style>
