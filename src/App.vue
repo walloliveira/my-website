@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import About from "./components/About.vue";
-import AppBarMenu from "./components/AppBarMenu.vue";
-import Home from "./components/Home.vue";
-import Skills from "./components/Skills.vue";
+import About from "./views/About.vue";
+import AppBarMenu from "./views/AppBarMenu.vue";
+import Home from "./views/Home.vue";
+import Skills from "./views/Skills.vue";
 </script>
 
 <template>
