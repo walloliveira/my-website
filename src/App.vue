@@ -6,7 +6,7 @@ import Home from "./components/Home.vue";
 
 <template>
   <VNoSsr>
-    <VApp class="overflow-hidden" theme="myCustomLightTheme">
+    <VApp theme="myCustomLightTheme">
       <VAppBar flat>
         <VAppBarNavIcon icon="mdi-arrow-projectile" />
         <VSpacer />
