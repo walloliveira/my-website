@@ -85,5 +85,62 @@ onBeforeMount(() => {
         </VCardText>
       </VCard>
     </VCol>
+    <VCol cols="12 mt-12">
+      <div class="d-flex flex-column text-center">
+        <p class="text-subtitle-1 text-uppercase">What I do</p>
+        <p class="text-h2">Strategy, design and a bit of magic</p>
+        <p class="text-body-1 text-medium-emphasis mt-6">
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia
+        </p>
+      </div>
+      <VCol cols="12">
+        <VRow>
+          <VCol cols="4">
+            <VCard :elevation="4" density="comfortable">
+              <VCardText>
+                <div class="d-flex flex-column align-center text-center">
+                  <VIcon icon="mdi-quadcopter" size="8vh" />
+                  <p class="text-overline text-uppercase mt-2">
+                    Design Sprints
+                  </p>
+
+                  <p class="text-overline text-uppercase mt-2">
+                    Product Strategy
+                  </p>
+                  <p class="text-overline text-uppercase mt-2">UX Strategy</p>
+                </div>
+              </VCardText>
+            </VCard>
+          </VCol>
+          <VCol cols="4">
+            <VCard :elevation="4" density="comfortable">
+              <VCardText>
+                <div class="d-flex flex-column align-center text-center">
+                  <VIcon icon="mdi-flask-round-bottom-outline" size="8vh" />
+                  <p class="text-overline text-uppercase mt-2">Information</p>
+
+                  <p class="text-overline text-uppercase mt-2">UX/UI Design</p>
+                  <p class="text-overline text-uppercase mt-2">Branding</p>
+                </div>
+              </VCardText>
+            </VCard>
+          </VCol>
+          <VCol cols="4">
+            <VCard :elevation="4" density="comfortable">
+              <VCardText>
+                <div class="d-flex flex-column align-center text-center">
+                  <VIcon icon="mdi-head-lightbulb-outline" size="8vh" />
+                  <p class="text-overline text-uppercase mt-2">Prototyping</p>
+
+                  <p class="text-overline text-uppercase mt-2">User Testing</p>
+                  <p class="text-overline text-uppercase mt-2">UI Testing</p>
+                </div>
+              </VCardText>
+            </VCard>
+          </VCol>
+        </VRow>
+      </VCol>
+    </VCol>
   </VRow>
 </template>

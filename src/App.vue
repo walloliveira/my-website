@@ -22,7 +22,7 @@ import Skills from "./views/Skills.vue";
             <About style="height: 90vh" />
           </VCol>
         </VRow>
-        <VCard color="teal-lighten-4">
+        <VCard color="teal-lighten-4" flat :elevation="0">
           <VCardText>
             <VLazy
               :options="{
@@ -38,6 +38,18 @@ import Skills from "./views/Skills.vue";
               </VRow>
             </VLazy>
           </VCardText>
+        </VCard>
+        <VCard
+          class="d-flex flex-row justify-center align-center"
+          color="teal-darken-4"
+          height="256px"
+          flat
+          :elevation="0"
+        >
+          <p class="text-h2">
+            I'm <span class="text-bold">Avaliable</span> For Freelancing
+            <VBtn color="primary" width="200px" height="80px">Hire me</VBtn>
+          </p>
         </VCard>
       </VMain>
     </VApp>
