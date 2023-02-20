@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "dateCompleted": "2020-08-24T17:55:49+00:00",
+      "id": "5ba69940-fc47-4da0-a4e0-85713ee2d730",
+      "level": "proficient",
+      "percentile": 73,
+      "score": 188,
+      "status": "live",
+      "title": "JavaScript",
+      "thumbnailUrl": "https://pluralsight2.imgix.net/paths/images/javascript-542e10ea6e.png",
+      "url": "javascript"
+    },
+    {
+      "dateCompleted": "2022-10-08T12:16:41+00:00",
+      "id": "4c450f56-a33f-4f71-b22e-42ee8fd1045b",
+      "level": "proficient",
+      "percentile": 44,
+      "score": 142,
+      "status": "live",
+      "title": "Java Testing",
+      "thumbnailUrl": "https://pluralsight2.imgix.net/assessments/images/icons/java-79830005fe.png",
+      "url": "java-testing"
+    },
+    {
+      "dateCompleted": "2020-10-21T13:33:10+00:00",
+      "id": "e2d1a3e6-ff0e-4f17-9e6f-e2acb7d29954",
+      "level": "expert",
+      "percentile": 84,
+      "score": 210,
+      "status": "retired",
+      "title": "Java",
+      "thumbnailUrl": "https://pluralsight.imgix.net/paths/path-icons/java-79830005fe.png",
+      "url": "java"
+    },
+    {
+      "dateCompleted": "2020-10-21T14:55:30+00:00",
+      "id": "d4395692-0600-498a-bec8-1f6859766481",
+      "level": "proficient",
+      "percentile": 46,
+      "score": 145,
+      "status": "live",
+      "title": "Core Spring",
+      "thumbnailUrl": "https://pluralsight2.imgix.net/paths/images/corespring-f9a00f4516.png",
+      "url": "core-spring"
+    },
+    {
+      "dateCompleted": "2021-10-31T12:06:32+00:00",
+      "id": "79842bae-0e49-4798-8bb1-e32b0e32c528",
+      "level": "proficient",
+      "percentile": 50,
+      "score": 150,
+      "status": "live",
+      "title": "Java Fundamentals",
+      "thumbnailUrl": "https://pluralsight2.imgix.net/assessments/images/icons/java-79830005fe.png",
+      "url": "java-fundamentals"
+    },
+    {
+      "dateCompleted": "2021-10-31T20:38:13+00:00",
+      "id": "c3df49b3-595d-4bc3-87ed-83a035fda95c",
+      "level": "expert",
+      "percentile": 86,
+      "score": 214,
+      "status": "live",
+      "title": "Java: Design Patterns",
+      "thumbnailUrl": "https://pluralsight2.imgix.net/paths/images/java-43581a2b56.png",
+      "url": "java-design-patterns"
+    },
+    {
+      "dateCompleted": "2020-08-24T18:06:27+00:00",
+      "id": "4ce2a1fa-1d2a-42ed-95ba-a3d5d7a70bd0",
+      "level": "proficient",
+      "percentile": 77,
+      "score": 195,
+      "status": "live",
+      "title": "Python Core Language",
+      "thumbnailUrl": "https://pluralsight.imgix.net/paths/python-7be70baaac.png",
+      "url": "python"
+    }
+  ]
+}
