@@ -6,19 +6,16 @@ const service = {
     SkillsHackerRank.data
       .filter((it) => it.stars > 0)
       .map(
-        (
-          {
-            badge_name: name,
-            stars,
-            current_points: score,
-            icon,
-            badge_type: type,
-          },
-          index
-        ) =>
+        ({
+          badge_name: title,
+          stars,
+          current_points: score,
+          icon,
+          badge_type: type,
+        }) =>
           ({
-            id: index + 1,
-            name,
+            id: title,
+            title,
             stars,
             score,
             icon,

@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from "vue";
-import { HackerRankSkill, PluralSightSkill } from "../domains/Skills";
+import {
+  HackerRankSkill,
+  JavaSkillColor,
+  PluralSightSkill,
+  PythonSkillColor,
+  Skill,
+  SkillColor,
+  SqlSkillColor,
+} from "../domains/Skills";
 import HackerRankSkillsService from "../services/HackerRankSkillsService";
 import PluralSightSkillsService from "../services/PluralSightSkillsService";
 
@@ -8,36 +16,16 @@ const pluralSightSkills = ref([] as PluralSightSkill[]);
 const hackerRankSkills = ref([] as HackerRankSkill[]);
 
 const colorsByType: {
-  [key: string]: (skill: HackerRankSkill) => string;
+  [key: string]: typeof JavaSkillColor;
 } = {
-  java: (skill: HackerRankSkill) => {
-    if (skill.score < 25) return "";
-    if (skill.score >= 25 && skill.score < 51) return "brown-lighten-1";
-    if (skill.score >= 80 && skill.score < 250) {
-      return "grey-lighten-1";
-    }
-    return "yellow-lighten-1";
-  },
-  python: (skill: HackerRankSkill) => {
-    if (skill.score < 35) return "";
-    if (skill.score >= 35 && skill.score < 110) return "brown-lighten-1";
-    if (skill.score >= 110 && skill.score < 400) {
-      return "grey-lighten-2";
-    }
-    return "yellow-lighten-2";
-  },
-  sql: (skill: HackerRankSkill) => {
-    if (skill.score < 80) return "";
-    if (skill.score >= 80 && skill.score < 300) return "brown-lighten-1";
-    if (skill.score >= 300 && skill.score < 650) {
-      return "grey-lighten-2";
-    }
-    return "yellow-lighten-2";
-  },
+  java: JavaSkillColor,
+  python: PythonSkillColor,
+  sql: SqlSkillColor,
 };
 
 const getColorBySkill = (skill: HackerRankSkill): string => {
-  return colorsByType[skill.type](skill);
+  const SkillColorClass = colorsByType[skill.type];
+  return new SkillColorClass(skill).getColor();
 };
 
 onBeforeMount(() => {
@@ -86,7 +74,7 @@ onBeforeMount(() => {
         <VCardText>
           <div class="d-flex flex-column align-center">
             <VIcon :icon="skill.icon" size="8vh" />
-            <p class="text-body-1">{{ skill.name }}</p>
+            <p class="text-body-1">{{ skill.title }}</p>
             <div class="d-flex">
               <VIcon icon="mdi-star" v-for="n in skill.stars" />
             </div>
