@@ -97,7 +97,7 @@ onBeforeMount(() => {
       <VCol cols="12">
         <VRow>
           <VCol cols="4">
-            <VCard :elevation="4" density="comfortable">
+            <VCard :elevation="4" density="comfortable" hover>
               <VCardText>
                 <div class="d-flex flex-column align-center text-center">
                   <VIcon icon="mdi-quadcopter" size="8vh" />
@@ -114,7 +114,7 @@ onBeforeMount(() => {
             </VCard>
           </VCol>
           <VCol cols="4">
-            <VCard :elevation="4" density="comfortable">
+            <VCard :elevation="4" density="comfortable" hover>
               <VCardText>
                 <div class="d-flex flex-column align-center text-center">
                   <VIcon icon="mdi-flask-round-bottom-outline" size="8vh" />
@@ -127,7 +127,7 @@ onBeforeMount(() => {
             </VCard>
           </VCol>
           <VCol cols="4">
-            <VCard :elevation="4" density="comfortable">
+            <VCard :elevation="4" density="comfortable" hover>
               <VCardText>
                 <div class="d-flex flex-column align-center text-center">
                   <VIcon icon="mdi-head-lightbulb-outline" size="8vh" />
