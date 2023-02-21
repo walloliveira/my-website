@@ -22,24 +22,22 @@ import Skills from "./views/Skills.vue";
             <About style="height: 90vh" />
           </VCol>
         </VRow>
-        <VCard color="teal-lighten-4" flat :elevation="0">
-          <VCardText>
-            <VLazy
-              :options="{
-                threshold: 100,
-              }"
-              min-height="200"
-              transition="fade-transition"
-            >
-              <VRow>
-                <VCol cols="8" offset="2">
-                  <Skills />
-                </VCol>
-              </VRow>
-            </VLazy>
-          </VCardText>
-        </VCard>
-        <VCard
+        <VSheet color="teal-lighten-4" flat :elevation="0">
+          <VLazy
+            :options="{
+              threshold: 100,
+            }"
+            min-height="200"
+            transition="fade-transition"
+          >
+            <VRow>
+              <VCol cols="8" offset="2">
+                <Skills />
+              </VCol>
+            </VRow>
+          </VLazy>
+        </VSheet>
+        <VSheet
           class="d-flex flex-row justify-center align-center"
           color="teal-darken-4"
           height="256px"
@@ -50,7 +48,7 @@ import Skills from "./views/Skills.vue";
             I'm <span class="text-bold">Avaliable</span> For Freelancing
             <VBtn color="primary" width="200px" height="80px">Hire me</VBtn>
           </p>
-        </VCard>
+        </VSheet>
       </VMain>
     </VApp>
   </VNoSsr>
