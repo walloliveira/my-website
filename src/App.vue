@@ -20,23 +20,23 @@ import ContactMe from "./views/ContactMe.vue";
         <AppBarMenu />
       </VAppBar>
       <VMain>
-        <AppSection>
-          <div class="d-flex flex-column">
-            <Home class="mb-16" />
-            <About class="mt-12" />
-          </div>
+        <AppSection id="home">
+          <Home />
         </AppSection>
-        <AppSection contrast>
+        <AppSection id="about">
+          <About />
+        </AppSection>
+        <AppSection contrast id="skills">
           <Skills />
         </AppSection>
         <HireMe />
-        <AppSection>
+        <AppSection id="projects">
           <Projects />
         </AppSection>
-        <AppSection contrast>
+        <AppSection contrast id="blog">
           <Blog />
         </AppSection>
-        <AppSection>
+        <AppSection id="contact">
           <ContactMe />
         </AppSection>
       </VMain>

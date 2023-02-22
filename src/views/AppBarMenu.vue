@@ -50,6 +50,7 @@ const menu = ref([
       :key="value"
       :prepend-icon="icon"
       :value="value"
+      :href="`#${value}`"
     >
       {{ text }}
     </VBtn>
