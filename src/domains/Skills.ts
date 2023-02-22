@@ -31,14 +31,14 @@ export abstract class SkillColor {
       this.skill.score >= this.getBronzeScore() &&
       this.skill.score < this.getSilverScore()
     )
-      return "brown-lighten-1";
+      return "bronze";
     if (
       this.skill.score >= this.getSilverScore() &&
       this.skill.score < this.getGoldScore()
     ) {
-      return "grey-lighten-2";
+      return "silver";
     }
-    return "yellow-lighten-2";
+    return "gold";
   }
 
   abstract getBronzeScore(): number;
