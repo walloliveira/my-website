@@ -15,6 +15,8 @@ const props = defineProps<SectionTitleProps>();
     <p class="text-body-1 text-medium-emphasis mt-6">
       {{ props.text }}
     </p>
-    <slot></slot>
+    <div class="mt-16 mb-16">
+      <slot></slot>
+    </div>
   </div>
 </template>

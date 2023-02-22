@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <VRow>
+  <VRow class="mt-16 mb-16">
     <VCol cols="4">
       <VImg
         src="https://preview.colorlib.com/theme/niko/images/about-1.jpg.webp"
