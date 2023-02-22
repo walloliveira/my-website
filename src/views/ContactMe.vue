@@ -16,27 +16,14 @@ import Section from "../components/Section.vue";
       </VCol>
       <VCol class="align-self-center">
         <VForm>
-          <VTextField
-            variant="outlined"
-            label="Your name"
-            placeholder="Walber Oliveira"
-          ></VTextField>
+          <VTextField variant="outlined" label="Your name"></VTextField>
           <VTextField
             variant="outlined"
             label="Your Email"
             type="email"
-            placeholder="walber.oliveira@email.com"
           ></VTextField>
-          <VTextField
-            variant="outlined"
-            label="Subject"
-            placeholder="I want to hire you"
-          ></VTextField>
-          <VTextarea
-            variant="outlined"
-            label="Message"
-            placeholder="The project is about..."
-          ></VTextarea>
+          <VTextField variant="outlined" label="Subject"></VTextField>
+          <VTextarea variant="outlined" label="Message"></VTextarea>
           <VBtn color="primary" block>Submit</VBtn>
         </VForm>
       </VCol>
