@@ -3,6 +3,9 @@ import About from "./views/About.vue";
 import AppBarMenu from "./views/AppBarMenu.vue";
 import Home from "./views/Home.vue";
 import Skills from "./views/Skills.vue";
+import HireMe from "./views/HireMe.vue";
+import Projects from "./views/Projects.vue";
+import AppSection from "./components/AppSection.vue";
 </script>
 
 <template>
@@ -14,15 +17,13 @@ import Skills from "./views/Skills.vue";
         <AppBarMenu />
       </VAppBar>
       <VMain>
-        <VRow>
-          <VCol cols="8" offset="2">
-            <Home style="height: 80vh" />
-          </VCol>
-          <VCol cols="8" offset="2">
-            <About style="height: 90vh" />
-          </VCol>
-        </VRow>
-        <VSheet color="teal-lighten-4" flat :elevation="0">
+        <AppSection>
+          <Home />
+        </AppSection>
+        <AppSection>
+          <About />
+        </AppSection>
+        <VSheet color="teal-lighten-4" :elevation="6">
           <VLazy
             :options="{
               threshold: 100,
@@ -30,31 +31,17 @@ import Skills from "./views/Skills.vue";
             min-height="200"
             transition="fade-transition"
           >
-            <VRow>
-              <VCol cols="8" offset="2">
-                <Skills />
-              </VCol>
-            </VRow>
+            <AppSection>
+              <Skills />
+            </AppSection>
           </VLazy>
         </VSheet>
-        <VSheet
-          class="d-flex flex-row justify-center align-center"
-          color="teal-darken-4"
-          height="256px"
-          flat
-          :elevation="0"
-        >
-          <p class="text-h2">
-            I'm <span class="text-bold">Avaliable</span> For Freelancing
-            <VBtn color="primary" width="200px" height="80px">Hire me</VBtn>
-          </p>
-        </VSheet>
+        <HireMe />
+        <AppSection>
+          <Projects />
+        </AppSection>
       </VMain>
     </VApp>
   </VNoSsr>
 </template>
-<style scoped lang="scss">
-.app-container {
-  max-width: 1200px;
-}
-</style>
+<style scoped lang="scss"></style>

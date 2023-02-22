@@ -18,6 +18,9 @@ const myCustomLightTheme: ThemeDefinition = {
     info: "#4DB6AC",
     success: "#00695C",
     warning: "#64FFDA",
+    gold: "#FFD700",
+    silver: "#BDBDBD",
+    bronze: "#8D6E63",
   },
 };
 

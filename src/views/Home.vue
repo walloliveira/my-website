@@ -4,9 +4,10 @@
     cycle
     :show-arrows="false"
     :vertical-delimiters="false"
+    height="65vh"
   >
     <VCarouselItem>
-      <div class="d-flex align-stretch">
+      <div class="d-flex align-center">
         <div class="d-flex align-center">
           <div class="text-h1">
             I'm a
