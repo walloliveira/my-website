@@ -6,6 +6,7 @@ import Skills from "./views/Skills.vue";
 import HireMe from "./views/HireMe.vue";
 import Projects from "./views/Projects.vue";
 import AppSection from "./components/AppSection.vue";
+import Footer from "./views/Footer.vue";
 import Blog from "./views/Blog.vue";
 import ContactMe from "./views/ContactMe.vue";
 </script>
@@ -39,6 +40,7 @@ import ContactMe from "./views/ContactMe.vue";
           <ContactMe />
         </AppSection>
       </VMain>
+      <Footer></Footer>
     </VApp>
   </VNoSsr>
 </template>
