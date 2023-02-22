@@ -6,6 +6,7 @@ import Skills from "./views/Skills.vue";
 import HireMe from "./views/HireMe.vue";
 import Projects from "./views/Projects.vue";
 import AppSection from "./components/AppSection.vue";
+import Blog from "./views/Blog.vue";
 </script>
 
 <template>
@@ -18,27 +19,20 @@ import AppSection from "./components/AppSection.vue";
       </VAppBar>
       <VMain>
         <AppSection>
-          <Home />
+          <div class="d-flex flex-column">
+            <Home class="mb-16" />
+            <About class="mt-12" />
+          </div>
         </AppSection>
-        <AppSection>
-          <About />
+        <AppSection contrast>
+          <Skills />
         </AppSection>
-        <VSheet color="teal-lighten-4" :elevation="6">
-          <VLazy
-            :options="{
-              threshold: 100,
-            }"
-            min-height="200"
-            transition="fade-transition"
-          >
-            <AppSection>
-              <Skills />
-            </AppSection>
-          </VLazy>
-        </VSheet>
         <HireMe />
         <AppSection>
           <Projects />
+        </AppSection>
+        <AppSection contrast>
+          <Blog />
         </AppSection>
       </VMain>
     </VApp>
