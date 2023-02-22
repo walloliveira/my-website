@@ -16,6 +16,8 @@ export interface HackerRankSkill extends Skill {
   type: string;
   stars: number;
   icon: string;
+  challengesSolved: number;
+  totalChallenges: number;
 }
 
 export abstract class SkillColor {

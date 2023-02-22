@@ -9,17 +9,21 @@ const service = {
         ({
           badge_name: title,
           stars,
-          current_points: score,
           icon,
           badge_type: type,
+          current_points: score,
+          total_challenges: totalChallenges,
+          solved: challengesSolved,
         }) =>
           ({
             id: title,
             title,
             stars,
-            score,
+            totalChallenges,
+            challengesSolved,
             icon,
             type,
+            score,
           } as HackerRankSkill)
       ),
 };

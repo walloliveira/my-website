@@ -10,6 +10,8 @@ import {
 } from "../domains/Skills";
 import HackerRankSkillsService from "../services/HackerRankSkillsService";
 import PluralSightSkillsService from "../services/PluralSightSkillsService";
+import HackerRankLogo from "../assets/hackerrank-logo.png";
+import PluralSightLogo from "../assets/pluralsight-logo.png";
 
 const pluralSightSkills = ref([] as PluralSightSkill[]);
 const hackerRankSkills = ref([] as HackerRankSkill[]);
@@ -39,127 +41,123 @@ onBeforeMount(() => {
     text="Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia"
   >
-    <VContainer>
-      <VRow>
-        <VCol cols="12">
-          <a
-            href="https://app.pluralsight.com/profile/walber-oliveira"
-            target="_blank"
-            >Plural sight</a
-          >
-        </VCol>
-        <VCol cols="3" v-for="skill in pluralSightSkills" :key="skill.id">
-          <VCard color="teal-darken-4">
-            <VCardText>
-              <div class="d-flex flex-column align-center">
-                <VImg :src="skill.thumbnailUrl" width="8vh" />
-                <p class="text-body-1">{{ skill.title }}</p>
-                <p class="text-h4 text-green text-uppercase">
-                  {{ skill.level }}
-                </p>
-              </div>
-            </VCardText>
-            <VDivider />
-            <VCardActions class="justify-center">
-              <p class="text-caption">
-                Verified
-                {{ new Date(skill.dateCompleted).toLocaleDateString("en-US") }}
+    <VRow>
+      <VCol cols="12">
+        <VBtn
+          rounded
+          class="mt-6"
+          href="https://app.pluralsight.com/profile/walber-oliveira"
+          target="_blank"
+          color="primary"
+        >
+          <VImg :src="PluralSightLogo" width="100" cover></VImg>
+        </VBtn>
+      </VCol>
+      <VCol cols="3" v-for="skill in pluralSightSkills" :key="skill.id">
+        <VCard color="teal-darken-4">
+          <VCardText>
+            <div class="d-flex flex-column align-center">
+              <VImg :src="skill.thumbnailUrl" width="8vh" />
+              <p class="text-body-1">{{ skill.title }}</p>
+              <p class="text-h4 text-green text-uppercase">
+                {{ skill.level }}
               </p>
-            </VCardActions>
-          </VCard>
-        </VCol>
-        <VDivider />
-        <VCol cols="12">
-          <a href="https://www.hackerrank.com/walloliveira" target="_blank"
-            >HackerRank</a
-          >
-        </VCol>
-        <VCol cols="3" v-for="skill in hackerRankSkills" :key="skill.id">
-          <VCard :color="getColorBySkill(skill)">
-            <VCardText>
-              <div class="d-flex flex-column align-center">
-                <VIcon :icon="skill.icon" size="8vh" />
-                <p class="text-body-1">{{ skill.title }}</p>
-                <div class="d-flex">
-                  <VIcon icon="mdi-star" v-for="n in skill.stars" />
-                </div>
-                <p class="text-h4 text-green text-uppercase">
-                  Score: {{ skill.score }}
-                </p>
-              </div>
-            </VCardText>
-          </VCard>
-        </VCol>
-        <VCol cols="12 mt-12">
-          <div class="d-flex flex-column text-center">
-            <p class="text-subtitle-1 text-uppercase">What I do</p>
-            <p class="text-h2">Strategy, design and a bit of magic</p>
-            <p class="text-body-1 text-medium-emphasis mt-6">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia
+            </div>
+          </VCardText>
+          <VDivider />
+          <VCardActions class="justify-center">
+            <p class="text-caption">
+              Verified
+              {{ new Date(skill.dateCompleted).toLocaleDateString("en-US") }}
             </p>
-          </div>
-          <VCol cols="12">
-            <VRow>
-              <VCol cols="3">
-                <VCard :elevation="4" density="comfortable" hover>
-                  <VCardText>
-                    <div class="d-flex flex-column align-center text-center">
-                      <VIcon icon="mdi-quadcopter" size="8vh" />
-                      <p class="text-overline text-uppercase mt-2">
-                        Design Sprints
-                      </p>
+          </VCardActions>
+        </VCard>
+      </VCol>
+      <VDivider />
+      <VCol cols="12">
+        <VBtn
+          rounded
+          class="mt-6"
+          href="https://www.hackerrank.com/walloliveira"
+          target="_blank"
+        >
+          <VImg :src="HackerRankLogo" width="100" cover></VImg>
+        </VBtn>
+      </VCol>
+      <VCol cols="3" v-for="skill in hackerRankSkills" :key="skill.id">
+        <VCard :color="getColorBySkill(skill)">
+          <VCardText>
+            <div class="d-flex flex-column align-center">
+              <VIcon :icon="skill.icon" size="8vh" />
+              <p class="text-body-1">{{ skill.title }}</p>
+              <div class="d-flex">
+                <VIcon icon="mdi-star" v-for="n in skill.stars" />
+              </div>
+            </div>
+          </VCardText>
+        </VCard>
+      </VCol>
+      <VCol class="mt-16" cols="12">
+        <div class="d-flex flex-column text-center">
+          <p class="text-subtitle-1 text-uppercase">What I do</p>
+          <p class="text-h2">Strategy, design and a bit of magic</p>
+          <p class="text-body-1 text-medium-emphasis mt-6">
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia
+          </p>
+        </div>
+        <VCol cols="12">
+          <VRow justify="center">
+            <VCol cols="3">
+              <VCard :elevation="4" density="comfortable" hover>
+                <VCardText>
+                  <div class="d-flex flex-column align-center text-center">
+                    <VIcon icon="mdi-quadcopter" size="8vh" />
+                    <p class="text-overline text-uppercase mt-2">
+                      Design Sprints
+                    </p>
 
-                      <p class="text-overline text-uppercase mt-2">
-                        Product Strategy
-                      </p>
-                      <p class="text-overline text-uppercase mt-2">
-                        UX Strategy
-                      </p>
-                    </div>
-                  </VCardText>
-                </VCard>
-              </VCol>
-              <VCol cols="3">
-                <VCard :elevation="4" density="comfortable" hover>
-                  <VCardText>
-                    <div class="d-flex flex-column align-center text-center">
-                      <VIcon icon="mdi-flask-round-bottom-outline" size="8vh" />
-                      <p class="text-overline text-uppercase mt-2">
-                        Information
-                      </p>
+                    <p class="text-overline text-uppercase mt-2">
+                      Product Strategy
+                    </p>
+                    <p class="text-overline text-uppercase mt-2">UX Strategy</p>
+                  </div>
+                </VCardText>
+              </VCard>
+            </VCol>
+            <VCol cols="3">
+              <VCard :elevation="4" density="comfortable" hover>
+                <VCardText>
+                  <div class="d-flex flex-column align-center text-center">
+                    <VIcon icon="mdi-flask-round-bottom-outline" size="8vh" />
+                    <p class="text-overline text-uppercase mt-2">Information</p>
 
-                      <p class="text-overline text-uppercase mt-2">
-                        UX/UI Design
-                      </p>
-                      <p class="text-overline text-uppercase mt-2">Branding</p>
-                    </div>
-                  </VCardText>
-                </VCard>
-              </VCol>
-              <VCol cols="3">
-                <VCard :elevation="4" density="comfortable" hover>
-                  <VCardText>
-                    <div class="d-flex flex-column align-center text-center">
-                      <VIcon icon="mdi-head-lightbulb-outline" size="8vh" />
-                      <p class="text-overline text-uppercase mt-2">
-                        Prototyping
-                      </p>
+                    <p class="text-overline text-uppercase mt-2">
+                      UX/UI Design
+                    </p>
+                    <p class="text-overline text-uppercase mt-2">Branding</p>
+                  </div>
+                </VCardText>
+              </VCard>
+            </VCol>
+            <VCol cols="3">
+              <VCard :elevation="4" density="comfortable" hover>
+                <VCardText>
+                  <div class="d-flex flex-column align-center text-center">
+                    <VIcon icon="mdi-head-lightbulb-outline" size="8vh" />
+                    <p class="text-overline text-uppercase mt-2">Prototyping</p>
 
-                      <p class="text-overline text-uppercase mt-2">
-                        User Testing
-                      </p>
-                      <p class="text-overline text-uppercase mt-2">
-                        UI Testing
-                      </p>
-                    </div>
-                  </VCardText>
-                </VCard>
-              </VCol>
-            </VRow>
-          </VCol>
+                    <p class="text-overline text-uppercase mt-2">
+                      User Testing
+                    </p>
+                    <p class="text-overline text-uppercase mt-2">UI Testing</p>
+                  </div>
+                </VCardText>
+              </VCard>
+            </VCol>
+          </VRow>
         </VCol>
-      </VRow>
-    </VContainer>
+      </VCol>
+    </VRow>
   </Section>
 </template>

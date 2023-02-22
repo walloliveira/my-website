@@ -4,12 +4,11 @@ import Project from "../components/Project.vue";
 </script>
 <template>
   <Section
-    class="mt-16"
     title="Our Projects"
     subtitle="accomplishments"
     text="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
   >
-    <VRow class="mt-12">
+    <VRow class="mt-6">
       <VCol cols="8">
         <Project
           subtitle="Web design"
