@@ -9,7 +9,7 @@ defineProps<ProjectProps>();
 </script>
 <template>
   <div class="h-100">
-    <VHover class="h-100" v-slot="{ isHovering, props }">
+    <VHover v-slot="{ isHovering, props }">
       <VCard
         :elevation="isHovering ? 12 : 2"
         :class="{ 'on-hover': isHovering }"
