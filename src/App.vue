@@ -7,6 +7,7 @@ import HireMe from "./views/HireMe.vue";
 import Projects from "./views/Projects.vue";
 import AppSection from "./components/AppSection.vue";
 import Blog from "./views/Blog.vue";
+import ContactMe from "./views/ContactMe.vue";
 </script>
 
 <template>
@@ -33,6 +34,9 @@ import Blog from "./views/Blog.vue";
         </AppSection>
         <AppSection contrast>
           <Blog />
+        </AppSection>
+        <AppSection>
+          <ContactMe />
         </AppSection>
       </VMain>
     </VApp>
