@@ -11,5 +11,28 @@
     "locale": {
       "label": "Language"
     }
+  },
+  "home": {
+    "carouselItem1": ["I'm a", "software engineer", "from Brazil"],
+    "carouselItem2": ["Hello", "I'm", "Walber Oliveira"]
+  },
+  "about": {
+    "subtitle": "Welcome",
+    "title": "About me",
+    "text": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+    "roles": [
+      {
+        "title": "Front end developer",
+        "text": "A small river named Duden flows by their place and supplies."
+      },
+      {
+        "title": "Back end developer",
+        "text": "A small river named Duden flows by their place and supplies."
+      },
+      {
+        "title": "Software architect",
+        "text": "A small river named Duden flows by their place and supplies."
+      }
+    ]
   }
 }
