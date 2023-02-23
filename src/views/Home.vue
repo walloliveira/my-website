@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Me1 from "../assets/me-1.webp";
+import Me2 from "../assets/me-2.webp";
+</script>
 <template>
   <div>
     <VCarousel
@@ -11,16 +15,14 @@
         <div class="d-flex align-center">
           <div class="d-flex align-center">
             <div class="text-h1">
-              I'm a
-              <span class="text-primary">software engineer</span>
-              from Brazil
+              {{ $t("home.carouselItem1[0]") }}
+              <span class="text-primary">
+                {{ $t("home.carouselItem1[1]") }}
+              </span>
+              {{ $t("home.carouselItem1[2]") }}
             </div>
           </div>
-          <VImg
-            src="https://preview.colorlib.com/theme/niko/images/about.jpg.webp"
-            cover
-            width="480px"
-          />
+          <VImg :src="Me1" cover width="480px" />
         </div>
       </VCarouselItem>
       <VCarouselItem>
@@ -28,19 +30,17 @@
           <div class="d-flex align-center">
             <div>
               <div class="text-subtitle-1 font-weight-bold text-info">
-                Hello
+                {{ $t("home.carouselItem2[0]") }}
               </div>
               <div class="text-h1">
-                I'm
-                <span class="text-primary">Walber Oliveira</span>
+                {{ $t("home.carouselItem2[1]") }}
+                <span class="text-primary">
+                  {{ $t("home.carouselItem2[2]") }}</span
+                >
               </div>
             </div>
           </div>
-          <VImg
-            src="https://preview.colorlib.com/theme/niko/images/bg_2.jpg.webp"
-            cover
-            width="768px"
-          />
+          <VImg :src="Me2" cover width="768px" />
         </div>
       </VCarouselItem>
     </VCarousel>

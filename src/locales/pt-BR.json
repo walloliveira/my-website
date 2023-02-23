@@ -11,5 +11,28 @@
     "locale": {
       "label": "Idioma"
     }
+  },
+  "home": {
+    "carouselItem1": ["Eu sou um", "engenheiro de software", "aqui do Brasil!"],
+    "carouselItem2": ["Olá!", "Meu nome é", "Walber Oliveira"]
+  },
+  "about": {
+    "subtitle": "Bem vindo",
+    "title": "Sobre mim",
+    "text": "Um pequeno rio chamado Duden corre por seu lugar e o abastece com a necessária regalia. É um país paradisíaco, em que pedaços torrados de frases voam para a boca.",
+    "roles": [
+      {
+        "title": "Desenvolvedor front end",
+        "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos."
+      },
+      {
+        "title": "Desenvolvedor back end",
+        "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos."
+      },
+      {
+        "title": "Arquiteto de software",
+        "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos."
+      }
+    ]
   }
 }
