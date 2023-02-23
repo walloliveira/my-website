@@ -123,6 +123,10 @@
         "message": "Mensagem",
         "btnSubmit": "Enviar"
       }
+    },
+    "footer": {
+      "socialNetworks": "Redes sociais",
+      "copyright": "Copyright ©2023 Todos os direitos reservados | Este modelo é feito por walloliveira.dev.br"
     }
   }
 }

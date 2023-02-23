@@ -115,6 +115,10 @@
         "message": "Message",
         "btnSubmit": "Submit"
       }
+    },
+    "footer": {
+      "socialNetworks": "Social networks",
+      "copyright": "Copyright ©2023 All rights reserved | This template is made by walloliveira.dev.br"
     }
   }
 }
