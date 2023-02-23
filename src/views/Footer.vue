@@ -52,12 +52,12 @@ const socialNetworks = ref([
             </div>
             <div class="d-flex align-center mt-1 mb-1">
               <VBtn
-                icon="mdi-phone"
+                icon="mdi-whatsapp"
                 variant="text"
-                href="tel:+5544991668179"
+                href="https://wa.me/5544991668179"
                 target="_blank"
               />
-              <p class="text-caption ml-1">+5544991668179</p>
+              <p class="text-caption ml-1">+55 44991668179</p>
             </div>
             <div class="d-flex align-center mt-1">
               <VBtn
