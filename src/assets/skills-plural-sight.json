@@ -8,7 +8,7 @@
       "score": 188,
       "status": "live",
       "title": "JavaScript",
-      "thumbnailUrl": "https://pluralsight2.imgix.net/paths/images/javascript-542e10ea6e.png",
+      "thumbnailUrl": "javascript-thumbnail.png",
       "url": "javascript"
     },
     {
@@ -19,7 +19,7 @@
       "score": 142,
       "status": "live",
       "title": "Java Testing",
-      "thumbnailUrl": "https://pluralsight2.imgix.net/assessments/images/icons/java-79830005fe.png",
+      "thumbnailUrl": "java-thumbnail.png",
       "url": "java-testing"
     },
     {
@@ -30,7 +30,7 @@
       "score": 210,
       "status": "retired",
       "title": "Java",
-      "thumbnailUrl": "https://pluralsight.imgix.net/paths/path-icons/java-79830005fe.png",
+      "thumbnailUrl": "java-thumbnail.png",
       "url": "java"
     },
     {
@@ -41,7 +41,7 @@
       "score": 145,
       "status": "live",
       "title": "Core Spring",
-      "thumbnailUrl": "https://pluralsight2.imgix.net/paths/images/corespring-f9a00f4516.png",
+      "thumbnailUrl": "corespring-thumbnail.png",
       "url": "core-spring"
     },
     {
@@ -52,7 +52,7 @@
       "score": 150,
       "status": "live",
       "title": "Java Fundamentals",
-      "thumbnailUrl": "https://pluralsight2.imgix.net/assessments/images/icons/java-79830005fe.png",
+      "thumbnailUrl": "java-thumbnail.png",
       "url": "java-fundamentals"
     },
     {
@@ -63,7 +63,7 @@
       "score": 214,
       "status": "live",
       "title": "Java: Design Patterns",
-      "thumbnailUrl": "https://pluralsight2.imgix.net/paths/images/java-43581a2b56.png",
+      "thumbnailUrl": "java-thumbnail.png",
       "url": "java-design-patterns"
     },
     {
@@ -74,7 +74,7 @@
       "score": 195,
       "status": "live",
       "title": "Python Core Language",
-      "thumbnailUrl": "https://pluralsight.imgix.net/paths/python-7be70baaac.png",
+      "thumbnailUrl": "python-thumbnail.png",
       "url": "python"
     }
   ]
