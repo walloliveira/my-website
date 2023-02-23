@@ -3,11 +3,7 @@ import Section from "../components/Section.vue";
 </script>
 
 <template>
-  <Section
-    title="Our Blog"
-    subtitle="BLOG"
-    text="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
-  >
-    <VAlert color="info">Soon!</VAlert>
+  <Section title="blog.title" subtitle="blog.subtitle" text="blog.text">
+    <VAlert icon="mdi-wrench" height="256px">{{ $t("blog.warning") }}</VAlert>
   </Section>
 </template>

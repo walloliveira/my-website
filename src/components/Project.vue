@@ -26,14 +26,14 @@ defineProps<ProjectProps>();
           <VExpandTransition>
             <div
               v-if="isHovering"
-              class="d-flex transition-fast-in-fast-out bg-primary v-card--reveal"
+              class="d-flex transition-fast-in-fast-out bg-primary-darken-1 v-card--reveal"
               style="height: 100%"
             >
               <div class="d-flex flex-column align-items-center">
-                <VBtn variant="text" :href="link" target="_blank">
-                  <span class="text-h5">{{ title }}</span>
+                <VBtn variant="plain" :href="link" target="_blank">
+                  <span class="text-body-1">{{ $t(title) }}</span>
                 </VBtn>
-                <p class="text-body-1">{{ subtitle }}</p>
+                <p class="text-caption">{{ $t(subtitle) }}</p>
               </div>
             </div>
           </VExpandTransition>
@@ -48,7 +48,7 @@ defineProps<ProjectProps>();
   align-items: center;
   bottom: 0;
   justify-content: center;
-  opacity: 0.6;
+  opacity: 0.8;
   position: absolute;
   width: 100%;
 }

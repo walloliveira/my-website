@@ -72,29 +72,49 @@
           "architecture": ["Prototyping", "User Testing", "UI Testing"]
         }
       }
-    }
-  },
-  "home": {
-    "carouselItem1": ["I'm a", "software engineer", "from Brazil"],
-    "carouselItem2": ["Hello", "I'm", "Walber Oliveira"]
-  },
-  "about": {
-    "subtitle": "Welcome",
-    "title": "About me",
-    "text": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
-    "roles": [
-      {
-        "title": "Front end developer",
-        "text": "A small river named Duden flows by their place and supplies."
-      },
-      {
-        "title": "Back end developer",
-        "text": "A small river named Duden flows by their place and supplies."
-      },
-      {
-        "title": "Software architect",
-        "text": "A small river named Duden flows by their place and supplies."
+    },
+    "hireMe": {
+      "iam": "I'm",
+      "available": "available",
+      "forFreelancing": "for freelancing",
+      "btnText": "Hire me"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "subtitle": "Our Portfolio",
+      "text": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+      "projects": [
+        {
+          "title": "My website",
+          "subtitle": "This website was developed here"
+        },
+        {
+          "title": "Keycloak",
+          "subtitle": "Authentication and authorization both front end e back end with Keycloak"
+        },
+        {
+          "title": "Credit card payments",
+          "subtitle": "A middleware of credit card payments using PagSeguro API"
+        }
+      ]
+    },
+    "blog": {
+      "title": "Our blog",
+      "subtitle": "Blog",
+      "text": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+      "warning": "Soon"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Contact Me",
+      "text": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+      "form": {
+        "yourName": "Your name",
+        "yourEmail": "Your email",
+        "subject": "Subject",
+        "message": "Message",
+        "btnSubmit": "Submit"
       }
-    ]
+    }
   }
 }

@@ -6,8 +6,12 @@
     :elevation="6"
   >
     <p class="text-h2">
-      I'm <span class="text-bold">Avaliable</span> For Freelancing
-      <VBtn color="secondary" width="200px" height="80px">Hire me</VBtn>
+      {{ $t("hireMe.iam") }}
+      <span class="text-bold">{{ $t("hireMe.available") }}</span>
+      {{ $t("hireMe.forFreelancing") }}
+      <VBtn color="secondary" width="200px" height="80px" href="#contact">{{
+        $t("hireMe.btnText")
+      }}</VBtn>
     </p>
   </VSheet>
 </template>
