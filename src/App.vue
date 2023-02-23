@@ -40,8 +40,7 @@ import ContactMe from "./views/ContactMe.vue";
           <ContactMe />
         </AppSection>
       </VMain>
-      <Footer></Footer>
+      <Footer />
     </VApp>
   </VNoSsr>
 </template>
-<style scoped lang="scss"></style>

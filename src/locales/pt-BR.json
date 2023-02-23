@@ -1,0 +1,15 @@
+{
+  "appBar": {
+    "menu": {
+      "home": "Home",
+      "about": "Sobre",
+      "skills": "Habilidades",
+      "portfolio": "Portifólio",
+      "blog": "Meu blog",
+      "contact": "Contato"
+    },
+    "locale": {
+      "label": "Idioma"
+    }
+  }
+}
