@@ -1,15 +1,85 @@
 {
-  "appBar": {
-    "menu": {
-      "home": "Home",
-      "about": "Sobre",
-      "skills": "Habilidades",
-      "portfolio": "Portifólio",
-      "blog": "Meu blog",
-      "contact": "Contato"
+  "datetimeFormats": {
+    "short": {
+      "year": "numeric",
+      "month": "2-digit",
+      "day": "numeric"
     },
-    "locale": {
-      "label": "Idioma"
+    "long": {
+      "year": "numeric",
+      "month": "short",
+      "day": "numeric",
+      "weekday": "short",
+      "hour": "numeric",
+      "minute": "numeric"
+    }
+  },
+  "messages": {
+    "appBar": {
+      "menu": {
+        "home": "Home",
+        "about": "Sobre",
+        "skills": "Habilidades",
+        "portfolio": "Portifólio",
+        "blog": "Meu blog",
+        "contact": "Contato"
+      },
+      "locale": {
+        "label": "Idioma"
+      }
+    },
+    "home": {
+      "carouselItem1": [
+        "Eu sou um",
+        "engenheiro de software",
+        "aqui do Brasil!"
+      ],
+      "carouselItem2": ["Olá!", "Meu nome é", "Walber Oliveira"]
+    },
+    "about": {
+      "subtitle": "Bem vindo",
+      "title": "Sobre mim",
+      "text": "Um pequeno rio chamado Duden corre por seu lugar e o abastece com a necessária regalia. É um país paradisíaco, em que pedaços torrados de frases voam para a boca.",
+      "roles": [
+        {
+          "title": "Desenvolvedor front end",
+          "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos."
+        },
+        {
+          "title": "Desenvolvedor back end",
+          "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos."
+        },
+        {
+          "title": "Arquiteto de software",
+          "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle": "Minhas habilidades",
+      "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos.",
+      "pluralsight": {
+        "level": {
+          "proficient": "proficiente",
+          "expert": "especialista"
+        },
+        "verified": "Verificado em {at}"
+      },
+      "summary": {
+        "title": "Estratégias, desenvolvimento e um pouco de magia",
+        "subtitle": "O que eu faço?",
+        "text": "Um pequeno rio chamado Duden flui por seu lugar e suprimentos.",
+        "additionalSkills": {
+          "frontend": [
+            "Design Sprints",
+            "Estratégias de produto",
+            "Estratégias de UX"
+          ],
+          "backend": ["Informação", "UX/UI Design", "Marca"],
+          "architecture": ["Prototipação", "Testes de usuário", "Testes de UI"]
+        }
+      }
     }
   },
   "home": {

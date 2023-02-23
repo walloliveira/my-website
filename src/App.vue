@@ -4,7 +4,7 @@ import AppBarMenu from "./views/AppBarMenu.vue";
 import Home from "./views/Home.vue";
 import Skills from "./views/Skills.vue";
 import HireMe from "./views/HireMe.vue";
-import Projects from "./views/Projects.vue";
+import Portfolio from "./views/Portfolio.vue";
 import AppSection from "./components/AppSection.vue";
 import Footer from "./views/Footer.vue";
 import Blog from "./views/Blog.vue";
@@ -30,8 +30,8 @@ import ContactMe from "./views/ContactMe.vue";
           <Skills />
         </AppSection>
         <HireMe />
-        <AppSection id="projects">
-          <Projects />
+        <AppSection id="portfolio">
+          <Portfolio />
         </AppSection>
         <AppSection contrast id="blog">
           <Blog />

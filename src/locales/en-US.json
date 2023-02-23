@@ -1,15 +1,77 @@
 {
-  "appBar": {
-    "menu": {
-      "home": "Home",
-      "about": "About",
-      "skills": "Skills",
-      "portfolio": "Portfolio",
-      "blog": "My blog",
-      "contact": "Contact"
+  "datetimeFormats": {
+    "short": {
+      "year": "numeric",
+      "month": "2-digit",
+      "day": "numeric"
     },
-    "locale": {
-      "label": "Language"
+    "long": {
+      "year": "numeric",
+      "month": "short",
+      "day": "numeric",
+      "weekday": "short",
+      "hour": "numeric",
+      "minute": "numeric"
+    }
+  },
+  "messages": {
+    "appBar": {
+      "menu": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "blog": "My blog",
+        "contact": "Contact"
+      },
+      "locale": {
+        "label": "Language"
+      }
+    },
+    "home": {
+      "carouselItem1": ["I'm a", "software engineer", "from Brazil"],
+      "carouselItem2": ["Hello", "I'm", "Walber Oliveira"]
+    },
+    "about": {
+      "subtitle": "Welcome",
+      "title": "About me",
+      "text": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+      "roles": [
+        {
+          "title": "Front end developer",
+          "text": "A small river named Duden flows by their place and supplies."
+        },
+        {
+          "title": "Back end developer",
+          "text": "A small river named Duden flows by their place and supplies."
+        },
+        {
+          "title": "Software architect",
+          "text": "A small river named Duden flows by their place and supplies."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "My skills",
+      "text": "A small river named Duden flows by their place and supplies.",
+      "pluralsight": {
+        "level": {
+          "proficient": "proficient",
+          "expert": "expert"
+        },
+        "verified": "Verified {at}"
+      },
+      "summary": {
+        "title": "Strategy, design and a bit of magic",
+        "subtitle": "What I do?",
+        "text": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia",
+        "additionalSkills": {
+          "frontend": ["Design Sprints", "Product strategy", "UX Strategy"],
+          "backend": ["Information", "UX/UI Design", "Branding"],
+          "architecture": ["Prototyping", "User Testing", "UI Testing"]
+        }
+      }
     }
   },
   "home": {
