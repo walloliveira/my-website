@@ -1,30 +1,38 @@
 <script setup lang="ts">
 import Section from "../components/Section.vue";
+import Me1 from "../assets/me-1.webp";
 </script>
 
 <template>
   <Section
-    title="Contact Me"
-    subtitle="contact"
-    text="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia"
+    title="contact.title"
+    subtitle="contact.subtitle"
+    text="contact.text"
   >
     <VRow>
       <VCol cols="5">
-        <VImg
-          src="https://preview.colorlib.com/theme/niko/images/about.jpg.webp"
-        ></VImg>
+        <VImg :src="Me1"></VImg>
       </VCol>
       <VCol class="align-self-center">
         <VForm>
-          <VTextField variant="outlined" label="Your name"></VTextField>
           <VTextField
             variant="outlined"
-            label="Your Email"
+            :label="$t('contact.form.yourName')"
+          ></VTextField>
+          <VTextField
+            variant="outlined"
+            :label="$t('contact.form.yourEmail')"
             type="email"
           ></VTextField>
-          <VTextField variant="outlined" label="Subject"></VTextField>
-          <VTextarea variant="outlined" label="Message"></VTextarea>
-          <VBtn color="primary" block>Submit</VBtn>
+          <VTextField
+            variant="outlined"
+            :label="$t('contact.form.subject')"
+          ></VTextField>
+          <VTextarea
+            variant="outlined"
+            :label="$t('contact.form.message')"
+          ></VTextarea>
+          <VBtn color="primary" block>{{ $t("contact.form.btnSubmit") }}</VBtn>
         </VForm>
       </VCol>
     </VRow>

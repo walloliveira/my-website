@@ -51,7 +51,7 @@ const menu = ref([
       </VBtn>
     </VBtnToggle>
     <VSelect
-      class="d-flex"
+      class="d-flex ml-1"
       density="compact"
       variant="outlined"
       v-model="$i18n.locale"
