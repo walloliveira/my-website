@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
+import { getLocaleImg, getLocaleDescription } from "../plugins/VueI18n";
 
 const buttonText = ref("home");
 const menu = ref([
@@ -28,6 +30,14 @@ const menu = ref([
     value: "contact",
   },
 ]);
+const i18n = useI18n();
+const languages = ref(
+  i18n.availableLocales.map((it) => ({
+    id: it,
+    description: getLocaleDescription(it),
+    img: getLocaleImg(it),
+  }))
+);
 </script>
 
 <template>
@@ -56,7 +66,23 @@ const menu = ref([
       variant="outlined"
       v-model="$i18n.locale"
       :label="$t('appBar.locale.label')"
-      :items="$i18n.availableLocales"
-    />
+      item-value="id"
+      item-title="description"
+      :items="languages"
+    >
+      <template v-slot:selection="{ item }">
+        <div class="d-flex">
+          <VAvatar :image="item.raw.img" size="24" />
+          <span class="text-body-1 ml-2">{{ item.title }}</span>
+        </div>
+      </template>
+      <template v-slot:item="{ props, item }">
+        <VListItem class="d-flex" v-bind="props">
+          <template v-slot:prepend>
+            <VAvatar :image="item.raw.img" size="24" />
+          </template>
+        </VListItem>
+      </template>
+    </VSelect>
   </div>
 </template>

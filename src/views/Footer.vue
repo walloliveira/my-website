@@ -76,6 +76,13 @@ const socialNetworks = ref([
               {{ $t("footer.copyright") }}
             </p>
           </VCol>
+          <VCol>
+            <a
+              href="https://www.flaticon.com/free-icons/brazil"
+              title="brazil icons"
+              >Icons created by Freepik - Flaticon</a
+            >
+          </VCol>
         </div>
       </VCol>
     </VRow>
