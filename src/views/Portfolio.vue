@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import Section from "../components/Section.vue";
+import Content from "../components/Content.vue";
 import Project from "../components/Project.vue";
 import Portfolio1 from "../assets/portfolio-1.jpg";
 import Portfolio2 from "../assets/portfolio-2.png";
 import Portfolio3 from "../assets/portfolio-3.jpg";
 </script>
 <template>
-  <Section
+  <Content
     title="portfolio.title"
     subtitle="portfolio.subtitle"
     text="portfolio.text"
+    id="portfolio"
   >
     <VRow class="mt-6">
       <VCol cols="8">
@@ -38,5 +39,5 @@ import Portfolio3 from "../assets/portfolio-3.jpg";
         </div>
       </VCol>
     </VRow>
-  </Section>
+  </Content>
 </template>

@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import Section from "../components/Section.vue";
 import Me1 from "../assets/me-1.webp";
+import Content from "../components/Content.vue";
 </script>
 
 <template>
-  <Section
+  <Content
     title="contact.title"
     subtitle="contact.subtitle"
     text="contact.text"
+    id="contact"
   >
     <VRow>
       <VCol cols="5">
@@ -36,5 +37,5 @@ import Me1 from "../assets/me-1.webp";
         </VForm>
       </VCol>
     </VRow>
-  </Section>
+  </Content>
 </template>

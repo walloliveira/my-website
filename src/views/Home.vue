@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Me1 from "../assets/me-1.webp";
 import Me2 from "../assets/me-2.webp";
+import TabStore from "../stores/TabStore";
 </script>
 <template>
   <div>
@@ -9,8 +10,11 @@ import Me2 from "../assets/me-2.webp";
       cycle
       :show-arrows="false"
       :vertical-delimiters="false"
-      height="65vh"
+      height="768px"
     >
+      <span
+        v-intersect="(isIntersecting: boolean) => TabStore.handleIntersect(isIntersecting, 'home')"
+      ></span>
       <VCarouselItem>
         <div class="d-flex align-stretch">
           <div class="d-flex align-center">

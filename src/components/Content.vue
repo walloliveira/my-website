@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import TabStore from "../stores/TabStore";
 
 interface SectionTitleProps {
   subtitle: string;
@@ -7,6 +8,7 @@ interface SectionTitleProps {
   text: string;
   removeMarginBottom?: boolean;
   removeMarginTop?: boolean;
+  id: string;
 }
 
 const props = defineProps<SectionTitleProps>();
@@ -25,7 +27,10 @@ const sectionClass = computed(() => {
     <p class="text-body-1 text-medium-emphasis mt-6">
       {{ $t(props.text) }}
     </p>
-    <div :class="sectionClass">
+    <div
+      :class="sectionClass"
+      v-intersect="(isIntersecting: boolean) => TabStore.handleIntersect(isIntersecting, id)"
+    >
       <slot></slot>
     </div>
   </div>
