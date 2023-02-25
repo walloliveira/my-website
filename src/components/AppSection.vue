@@ -17,13 +17,9 @@ defineProps<AppSectionProps>();
       }"
       transition="scale-transition"
     >
-      <VRow>
-        <VCol cols="8" offset="2">
-          <div class="mt-16 mb-16">
-            <slot> </slot>
-          </div>
-        </VCol>
-      </VRow>
+      <VContainer style="max-width: 1200px">
+        <slot> </slot>
+      </VContainer>
     </VLazy>
   </VSheet>
 </template>

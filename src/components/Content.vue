@@ -23,15 +23,15 @@ const sectionClass = computed(() => {
 <template>
   <div class="d-flex flex-column text-center">
     <p class="text-subtitle-1 text-uppercase">{{ $t(props.subtitle) }}</p>
-    <p class="text-h2">{{ $t(props.title) }}</p>
-    <p class="text-body-1 text-medium-emphasis mt-6">
+    <p class="text-lg-h2 text-xs-h3 text-sm-h3">{{ $t(props.title) }}</p>
+    <p class="text-lg-body-1 text-body-2 text-medium-emphasis mt-6">
       {{ $t(props.text) }}
     </p>
-    <div
-      :class="sectionClass"
-      v-intersect="(isIntersecting: boolean) => TabStore.handleIntersect(isIntersecting, id)"
-    >
-      <slot></slot>
-    </div>
   </div>
+  <VContainer
+    :class="sectionClass"
+    v-intersect="(isIntersecting: boolean) => TabStore.handleIntersect(isIntersecting, id)"
+  >
+    <slot></slot>
+  </VContainer>
 </template>

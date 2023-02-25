@@ -75,7 +75,6 @@ onBeforeMount(() => {
       <VCol cols="12">
         <VBtn
           rounded
-          class="mt-6"
           href="https://app.pluralsight.com/profile/walber-oliveira"
           target="_blank"
           color="primary"
@@ -83,7 +82,14 @@ onBeforeMount(() => {
           <VImg :src="PluralSightLogo" width="100" cover />
         </VBtn>
       </VCol>
-      <VCol cols="3" v-for="skill in pluralSightSkills" :key="skill.id">
+      <VCol
+        cols="12"
+        xs="12"
+        sm="12"
+        lg="3"
+        v-for="skill in pluralSightSkills"
+        :key="skill.id"
+      >
         <VHover>
           <template v-slot="{ isHovering, props }">
             <VCard
@@ -126,17 +132,24 @@ onBeforeMount(() => {
           <VImg :src="HackerRankLogo" width="100" cover />
         </VBtn>
       </VCol>
-      <VCol cols="3" v-for="skill in hackerRankSkills" :key="skill.id">
+      <VCol
+        xs="12"
+        sm="12"
+        lg="3"
+        v-for="skill in hackerRankSkills"
+        :key="skill.id"
+      >
         <VHover>
           <template v-slot="{ isHovering, props }">
             <VCard
               :elevation="isHovering ? 12 : 3"
               v-bind="props"
               :color="getColorBySkill(skill)"
+              class="w-100"
             >
               <VCardText>
                 <div class="d-flex flex-column align-center">
-                  <VIcon :icon="skill.icon" size="8vh" />
+                  <VIcon :icon="skill.icon" size="100" />
                   <p class="text-body-1">{{ skill.title }}</p>
                   <div class="d-flex">
                     <VIcon icon="mdi-star" v-for="n in skill.stars" />
@@ -147,7 +160,7 @@ onBeforeMount(() => {
           </template>
         </VHover>
       </VCol>
-      <VCol class="mt-8" cols="12">
+      <VCol cols="12">
         <VRow justify="center">
           <VCol cols="12">
             <Content
@@ -160,7 +173,10 @@ onBeforeMount(() => {
             ></Content>
           </VCol>
           <VCol
-            cols="3"
+            cols="12"
+            xs="12"
+            sm="12"
+            lg="3"
             v-for="additionalSkill in skillsSummaryAdditionalSkills"
             :key="additionalSkill.icon"
           >

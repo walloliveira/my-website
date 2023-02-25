@@ -11,10 +11,10 @@ import Content from "../components/Content.vue";
     id="contact"
   >
     <VRow>
-      <VCol cols="5">
+      <VCol cols="12" sm="6" lg="4">
         <VImg :src="Me1"></VImg>
       </VCol>
-      <VCol class="align-self-center">
+      <VCol cols="12" sm="6" lg="8" class="align-self-lg-center">
         <VForm>
           <VTextField
             variant="outlined"

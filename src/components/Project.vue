@@ -21,7 +21,7 @@ defineProps<ProjectProps>();
           :aspect-ratio="16 / 9"
           cover
           :src="imgSrc"
-          minx-width="200px"
+          min-width="200px"
         >
           <VExpandTransition>
             <div
