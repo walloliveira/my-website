@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from "vue";
-import Section from "../components/Section.vue";
+import HackerRankLogo from "../assets/hackerrank-logo.png";
+import PluralSightLogo from "../assets/pluralsight-logo.png";
+import Content from "../components/Content.vue";
 import {
   HackerRankSkill,
   JavaSkillColor,
@@ -10,8 +12,6 @@ import {
 } from "../domains/Skills";
 import HackerRankSkillsService from "../services/HackerRankSkillsService";
 import PluralSightSkillsService from "../services/PluralSightSkillsService";
-import HackerRankLogo from "../assets/hackerrank-logo.png";
-import PluralSightLogo from "../assets/pluralsight-logo.png";
 
 const pluralSightSkills = ref([] as PluralSightSkill[]);
 const hackerRankSkills = ref([] as HackerRankSkill[]);
@@ -65,12 +65,16 @@ onBeforeMount(() => {
 });
 </script>
 <template>
-  <Section title="skills.title" subtitle="skills.subtitle" text="skills.text">
+  <Content
+    title="skills.title"
+    subtitle="skills.subtitle"
+    text="skills.text"
+    id="skills"
+  >
     <VRow>
       <VCol cols="12">
         <VBtn
           rounded
-          class="mt-6"
           href="https://app.pluralsight.com/profile/walber-oliveira"
           target="_blank"
           color="primary"
@@ -78,7 +82,14 @@ onBeforeMount(() => {
           <VImg :src="PluralSightLogo" width="100" cover />
         </VBtn>
       </VCol>
-      <VCol cols="3" v-for="skill in pluralSightSkills" :key="skill.id">
+      <VCol
+        cols="12"
+        xs="12"
+        sm="12"
+        lg="3"
+        v-for="skill in pluralSightSkills"
+        :key="skill.id"
+      >
         <VHover>
           <template v-slot="{ isHovering, props }">
             <VCard
@@ -90,7 +101,7 @@ onBeforeMount(() => {
                 <div class="d-flex flex-column align-center">
                   <VImg :src="getImageUrl(skill)" width="8vh" />
                   <p class="text-body-1">{{ skill.title }}</p>
-                  <p class="text-h4 text-green text-uppercase">
+                  <p class="text-h4 text-uppercase">
                     {{ $t(`skills.pluralsight.level.${skill.level}`) }}
                   </p>
                 </div>
@@ -116,21 +127,29 @@ onBeforeMount(() => {
           class="mt-6"
           href="https://www.hackerrank.com/walloliveira"
           target="_blank"
+          color="background"
         >
           <VImg :src="HackerRankLogo" width="100" cover />
         </VBtn>
       </VCol>
-      <VCol cols="3" v-for="skill in hackerRankSkills" :key="skill.id">
+      <VCol
+        xs="12"
+        sm="12"
+        lg="3"
+        v-for="skill in hackerRankSkills"
+        :key="skill.id"
+      >
         <VHover>
           <template v-slot="{ isHovering, props }">
             <VCard
               :elevation="isHovering ? 12 : 3"
               v-bind="props"
               :color="getColorBySkill(skill)"
+              class="w-100"
             >
               <VCardText>
                 <div class="d-flex flex-column align-center">
-                  <VIcon :icon="skill.icon" size="8vh" />
+                  <VIcon :icon="skill.icon" size="100" />
                   <p class="text-body-1">{{ skill.title }}</p>
                   <div class="d-flex">
                     <VIcon icon="mdi-star" v-for="n in skill.stars" />
@@ -141,19 +160,23 @@ onBeforeMount(() => {
           </template>
         </VHover>
       </VCol>
-      <VCol class="mt-8" cols="12">
+      <VCol cols="12">
         <VRow justify="center">
           <VCol cols="12">
-            <Section
+            <Content
               title="skills.summary.title"
               subtitle="skills.summary.subtitle"
               text="skills.summary.text"
               remove-margin-bottom
               remove-margin-top
-            ></Section>
+              id="skills"
+            ></Content>
           </VCol>
           <VCol
-            cols="3"
+            cols="12"
+            xs="12"
+            sm="12"
+            lg="3"
             v-for="additionalSkill in skillsSummaryAdditionalSkills"
             :key="additionalSkill.icon"
           >
@@ -161,7 +184,7 @@ onBeforeMount(() => {
               <template v-slot="{ isHovering, props }">
                 <VCard
                   v-bind="props"
-                  :color="isHovering ? 'primary' : undefined"
+                  :color="isHovering ? 'primary' : 'info'"
                   :elevation="isHovering ? 12 : 2"
                   density="comfortable"
                   hover
@@ -185,5 +208,5 @@ onBeforeMount(() => {
         </VRow>
       </VCol>
     </VRow>
-  </Section>
+  </Content>
 </template>

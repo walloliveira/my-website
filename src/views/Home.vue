@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Me1 from "../assets/me-1.webp";
 import Me2 from "../assets/me-2.webp";
+import TabStore from "../stores/TabStore";
 </script>
 <template>
   <div>
@@ -9,16 +10,19 @@ import Me2 from "../assets/me-2.webp";
       cycle
       :show-arrows="false"
       :vertical-delimiters="false"
-      height="65vh"
+      height="550px"
     >
+      <span
+        v-intersect="(isIntersecting: boolean) => TabStore.handleIntersect(isIntersecting, 'home')"
+      ></span>
       <VCarouselItem>
-        <div class="d-flex align-stretch">
-          <div class="d-flex align-center">
+        <div class="d-lg-flex h-100">
+          <div class="d-lg-flex align-lg-center">
             <div>
               <div class="text-subtitle-1 font-weight-bold text-info">
                 {{ $t("home.carouselItem2[0]") }}
               </div>
-              <div class="text-h1">
+              <div class="text-lg-h1 text-h3">
                 {{ $t("home.carouselItem2[1]") }}
                 <span class="text-primary">
                   {{ $t("home.carouselItem2[2]") }}</span
@@ -26,13 +30,13 @@ import Me2 from "../assets/me-2.webp";
               </div>
             </div>
           </div>
-          <VImg :src="Me2" cover width="768px" />
+          <VImg :src="Me2" cover width="768px" :aspect-ratio="5 / 6" />
         </div>
       </VCarouselItem>
       <VCarouselItem>
-        <div class="d-flex align-center">
+        <div class="d-lg-flex align-center h-100">
           <div class="d-flex align-center">
-            <div class="text-h1">
+            <div class="text-lg-h1 text-h4">
               {{ $t("home.carouselItem1[0]") }}
               <span class="text-primary">
                 {{ $t("home.carouselItem1[1]") }}

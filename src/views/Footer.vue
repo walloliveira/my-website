@@ -17,8 +17,8 @@ const socialNetworks = ref([
 ]);
 </script>
 <template>
-  <VSheet color="primary" :elevation="6">
-    <VRow class="mt-16 mb-16">
+  <VFooter color="primary">
+    <VRow class="mt-8 mb-8">
       <VCol cols="8" offset="2">
         <div class="d-flex align-center justify-center flex-column">
           <p class="text-h5 mb-6">
@@ -31,10 +31,10 @@ const socialNetworks = ref([
               class="ml-3"
             >
               <VBtn
-                color="secondary"
                 :icon="socialNetwork.icon"
                 :href="socialNetwork.url"
                 target="_blank"
+                variant="tonal"
               />
             </div>
           </div>
@@ -86,5 +86,5 @@ const socialNetworks = ref([
         </div>
       </VCol>
     </VRow>
-  </VSheet>
+  </VFooter>
 </template>

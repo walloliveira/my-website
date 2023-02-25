@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import Section from "../components/Section.vue";
+import Content from "../components/Content.vue";
 </script>
 
 <template>
-  <Section title="blog.title" subtitle="blog.subtitle" text="blog.text">
+  <Content
+    title="blog.title"
+    subtitle="blog.subtitle"
+    text="blog.text"
+    id="blog"
+  >
     <VAlert icon="mdi-wrench" height="256px">{{ $t("blog.warning") }}</VAlert>
-  </Section>
+  </Content>
 </template>

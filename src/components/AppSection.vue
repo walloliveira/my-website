@@ -1,30 +1,25 @@
 <script setup lang="ts">
-import { computed } from "vue";
-
 interface AppSectionProps {
   contrast?: boolean;
+  id: string;
 }
-const props = defineProps<AppSectionProps>();
+defineProps<AppSectionProps>();
 </script>
 <template>
   <VSheet
     :color="contrast ? 'secondary' : 'transparent'"
     :elevation="contrast ? 6 : 0"
+    :id="id"
   >
     <VLazy
       :options="{
-        threshold: 100,
+        threshold: 0.5,
       }"
-      min-height="200"
-      transition="fade-transition"
+      transition="scale-transition"
     >
-      <VRow>
-        <VCol cols="8" offset="2">
-          <div class="mt-16 mb-16">
-            <slot></slot>
-          </div>
-        </VCol>
-      </VRow>
+      <VContainer style="max-width: 1200px">
+        <slot> </slot>
+      </VContainer>
     </VLazy>
   </VSheet>
 </template>

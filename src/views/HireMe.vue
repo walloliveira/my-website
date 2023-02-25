@@ -1,17 +1,20 @@
 <template>
-  <VSheet
-    class="d-flex flex-row justify-center align-center"
-    color="primary"
-    height="256px"
-    :elevation="6"
-  >
-    <p class="text-h2">
-      {{ $t("hireMe.iam") }}
-      <span class="text-bold">{{ $t("hireMe.available") }}</span>
-      {{ $t("hireMe.forFreelancing") }}
-      <VBtn color="secondary" width="200px" height="80px" href="#contact">{{
-        $t("hireMe.btnText")
-      }}</VBtn>
-    </p>
+  <VSheet color="primary" height="256px" :elevation="6">
+    <VContainer class="h-100 d-flex align-center">
+      <VRow align="center" justify="center">
+        <VCol class="text-center" cols="12" lg="6">
+          <p class="text-h6 text-lg-h3">
+            {{ $t("hireMe.iam") }}
+            <span class="text-warning">{{ $t("hireMe.available") }}</span>
+            {{ $t("hireMe.forFreelancing") }}
+          </p>
+        </VCol>
+        <VCol cols="12" lg="2">
+          <VBtn block color="secondary" href="#contact">
+            {{ $t("hireMe.btnText") }}
+          </VBtn>
+        </VCol>
+      </VRow>
+    </VContainer>
   </VSheet>
 </template>
