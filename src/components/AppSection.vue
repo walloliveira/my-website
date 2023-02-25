@@ -23,6 +23,7 @@ const sectionClass = computed(() => {
     :id="id"
   >
     <VLazy
+      qww
       :options="{
         threshold: 0.5,
       }"
