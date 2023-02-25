@@ -13,7 +13,7 @@ import Portfolio3 from "../assets/portfolio-3.jpg";
     id="portfolio"
   >
     <VRow>
-      <VCol sm="12" lg="8">
+      <VCol cols="12" sm="12" md="8" lg="8">
         <Project
           subtitle="portfolio.projects[0].subtitle"
           title="portfolio.projects[0].title"
@@ -21,7 +21,7 @@ import Portfolio3 from "../assets/portfolio-3.jpg";
           link="https://github.com/walloliveira/my-website"
         />
       </VCol>
-      <VCol sm="12" lg="4">
+      <VCol cols="12" sm="12" md="4" lg="4">
         <VRow>
           <VCol sm="12">
             <Project

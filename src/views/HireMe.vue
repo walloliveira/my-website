@@ -9,7 +9,7 @@
             {{ $t("hireMe.forFreelancing") }}
           </p>
         </VCol>
-        <VCol cols="12" lg="2">
+        <VCol cols="12" md="6" lg="2">
           <VBtn block color="secondary" href="#contact">
             {{ $t("hireMe.btnText") }}
           </VBtn>
