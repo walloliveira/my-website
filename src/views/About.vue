@@ -26,7 +26,7 @@ const roles = ref([
 <template>
   <VRow class="mt-16 mb-16">
     <VCol cols="12" xs="2" sm="4" lg="4">
-      <VImg :src="AboutMe1" />
+      <VImg :src="AboutMe1" cover />
     </VCol>
     <VCol xs="12" sm="12" md="8" lg="8">
       <Content
