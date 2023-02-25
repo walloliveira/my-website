@@ -123,14 +123,14 @@ const isMobile = computed(() => {
         <AppSection id="about">
           <About />
         </AppSection>
-        <AppSection id="skills" contrast>
+        <AppSection id="skills" contrast remove-margin-bottom>
           <Skills />
         </AppSection>
         <HireMe />
         <AppSection id="portfolio">
           <Portfolio />
         </AppSection>
-        <AppSection id="contact" contrast>
+        <AppSection id="contact" contrast remove-margin-bottom>
           <ContactMe />
         </AppSection>
       </VNoSsr>
